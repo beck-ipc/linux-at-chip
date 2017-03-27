@@ -23,7 +23,6 @@ if [ -e ./yocto-bsp ]; then
 fi
                 
                 
-
 echo
 echo Cloning required Git repositories
 echo
@@ -35,15 +34,13 @@ git clone https://github.com/beck-ipc/meta-at-chip.git
 echo
 echo Initialising build setup
 echo
-mkdir -p build-$YOCTO_MACHINE/conf
-cp meta-at-chip/documentation/bblayers.conf.sample build-$YOCTO_MACHINE/conf/bblayers.conf
-cp meta-at-chip/documentation/local.conf.sample build-$YOCTO_MACHINE/conf/local.conf
+sed -i 's/meta-poky/meta-at-chip/g' .templateconf
 
 echo
 echo
 echo Your BSP has been set up in directory $YOCTO_DIR
 echo
-echo There run \. oe-init-build-env build-$YOCTO_MACHINE\"
+echo There run ". oe-init-build-env build-$YOCTO_MACHINE\"
 echo in order to set up your build.
 echo
 echo For your target you can continue building a filesystem image with this command
