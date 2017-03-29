@@ -40,7 +40,7 @@ echo
 echo
 echo Your BSP has been set up in directory $YOCTO_DIR
 echo
-echo There run ". oe-init-build-env build-$YOCTO_MACHINE\"
+echo There run ". oe-init-build-env build-$YOCTO_MACHINE"
 echo in order to set up your build.
 echo
 echo For your target you can continue building a filesystem image with this command
