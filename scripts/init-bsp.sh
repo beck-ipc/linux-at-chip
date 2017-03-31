@@ -18,7 +18,7 @@ fi
 echo ok
 echo
 if [ -e ./${YOCTO_DIR} ]; then
-	echo 'Error: The output directory "yocto-bsp" already exists.'
+	echo 'Notneeded: The output directory "yocto-bsp" already exists here.'
         exit 2
 fi
                 
