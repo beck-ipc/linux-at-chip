@@ -31,6 +31,7 @@ git clone git://git.yoctoproject.org/poky -b $YOCTO_RELEASE $YOCTO_DIR
 cd $YOCTO_DIR
 git clone git://git.openembedded.org/meta-openembedded -b $YOCTO_RELEASE
 git clone https://git.yoctoproject.org/git/meta-freescale -b $YOCTO_RELEASE
+git clone https://github.com/kernelconcepts/meta-webstuff.git
 git clone https://github.com/beck-ipc/meta-at-chip.git
 git clone https://github.com/beck-ipc/linux-at-chip.git
 echo

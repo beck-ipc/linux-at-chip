@@ -1,7 +1,7 @@
 #!/bin/sh
 
 BASEDIR=$PWD
-TREES=". meta-yocto meta-freescale meta-openembedded meta-at-chip linux-at-chip "
+TREES=". meta-yocto meta-freescale meta-openembedded meta-at-chip meta-webstuff linux-at-chip "
 
 echo
 echo LINUX@CHIP Yocto BSP updater
