@@ -1,6 +1,8 @@
 #!/bin/sh
 
 BASEDIR=$PWD
+YOCTO_RELEASE="morty"
+
 TREES=". meta-yocto meta-freescale meta-openembedded meta-qt5 meta-at-chip meta-webstuff linux-at-chip "
 
 echo
@@ -18,6 +20,18 @@ if [ ! -d ./meta-at-chip ]; then
 	echo 'Error: Please run this script from your BSP main directory (usually "yocto-bsp")'
 	exit 2
 fi                
+
+if [ ! -d ./meta-webstuff ]; then
+	echo Adding meta-webstuff repository
+	git clone https://github.com/kernelconcepts/meta-webstuff.git
+fi
+
+if [ ! -d ./meta-qt5 ]; then
+	echo Adding meta-qt5 repository
+	git clone https://github.com/meta-qt5/meta-qt5.git -b $YOCTO_RELEASE
+fi
+
+
 
 echo Updating known repositories
 echo
